@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "johnsoncodehk.volar",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    "editorconfig.editorconfig",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "naumovs.color-highlight",
+    "aaron-bond.better-comments",
+    "esbenp.prettier-vscode"
+  ]
+}
