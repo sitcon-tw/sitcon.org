@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 export default function Nav() {
   return (
-    <nav className="w-full border-t">
+    <nav className="w-full border-t-2 border-primary">
       <div className="container flex items-center justify-between gap-2 py-4">
         <Link to="/">
           <img src="/logo.svg" alt="logo" className="h-8 -translate-y-1" />
