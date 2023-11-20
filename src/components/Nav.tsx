@@ -74,17 +74,20 @@ export default function Nav() {
                     <div className="opacity-50">查看各項活動的介紹</div>
                   </div>
                   <div className="col-span-2">
-                    <ListItem to="/branding" title="參與社群">
+                    <ListItem to="/engage/participate" title="參與社群">
                       如果你想要參與 SITCON，無論大小活動，都可以從這裡開始。
                     </ListItem>
-                    <ListItem to="/branding" title="行為準則">
+                    <ListItem to="/engage/code-of-conduct" title="行為準則">
                       我們制定了行為準則，以維護 SITCON 的社群文化。
                     </ListItem>
-                    <ListItem to="/branding" title="開放社群推廣目錄">
+                    <ListItem
+                      to="/engage/floss-community-list"
+                      title="開放社群推廣目錄"
+                    >
                       如果你在尋找開放社群，這裡準沒錯。
                     </ListItem>
-                    <ListItem to="/branding" title="小額捐助">
-                      小石感謝你
+                    <ListItem to="/engage/donate" title="小額捐助">
+                      透過小額捐助支持 SITCON
                     </ListItem>
                   </div>
                 </div>
