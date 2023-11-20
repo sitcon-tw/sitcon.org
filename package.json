@@ -12,12 +12,18 @@
   "dependencies": {
     "@mdx-js/react": "^3.0.0",
     "@mdx-js/rollup": "^3.0.0",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "glob": "^10.3.10",
+    "lucide-react": "^0.292.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.19.0",
-    "remark-mdx-frontmatter": "^4.0.0"
+    "remark-mdx-frontmatter": "^4.0.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",

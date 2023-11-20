@@ -15,6 +15,11 @@ function parsePath(path: string) {
 }
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      "@/": "/src/",
+    },
+  },
   plugins: [
     mdx({
       providerImportSource: "@mdx-js/react",
