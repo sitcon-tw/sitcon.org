@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./components/Header.tsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -18,6 +19,7 @@ const pages: Record<
       title: string;
       description: string;
       featured_image?: string;
+      hide_header?: boolean;
     };
   }
 > = import.meta.glob("./content/**/*.mdx", { eager: true });
@@ -36,7 +38,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       {Object.keys(pages).map((path: string) => {
         const PageComponent = pages[path].default; // Get the component function
-        const { title, description } = pages[path].frontmatter;
+        const frontmatter = pages[path].frontmatter;
+        const { title, description, hide_header } = frontmatter;
         return (
           <Route
             path={parsePath(path)}
@@ -47,7 +50,12 @@ const router = createBrowserRouter(
                   <title>{title}</title>
                   <meta name="description" content={description} />
                 </Helmet>
-                <PageComponent />
+                {!hide_header && <Header {...frontmatter} />}
+                <div className="container">
+                  <div className="prose">
+                    <PageComponent />
+                  </div>
+                </div>
               </>
             }
             key={path}

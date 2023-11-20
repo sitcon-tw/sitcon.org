@@ -25,11 +25,7 @@ export default function Layout() {
     <>
       <Alert />
       <Nav />
-      <div className="container">
-        <div className="prose">
-          <Outlet />
-        </div>
-      </div>
+      <Outlet />
       <Footer />
     </>
   );
