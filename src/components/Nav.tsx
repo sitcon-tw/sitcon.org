@@ -69,10 +69,13 @@ export default function Nav() {
               <NavigationMenuTrigger>參與</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid grid-cols-3 md:w-[400px] lg:w-[500px] gap-2">
-                  <div className="col-span-1 bg-gray-100 flex items-start justify-end flex-col p-2 pt-20 rounded-sm text-sm">
+                  <Link
+                    className="col-span-1 bg-gray-100 hover:bg-gray-200 active:bg-gray-300 transition-colors flex items-start justify-end flex-col p-2 pt-20 rounded-sm text-sm"
+                    to={parsePath("/engage/events")}
+                  >
                     活動
-                    <div className="opacity-50">查看各項活動的介紹</div>
-                  </div>
+                    <div className="opacity-50">認識 SITCON 舉辦的活動</div>
+                  </Link>
                   <div className="col-span-2">
                     <ListItem to="/engage/participate" title="參與社群">
                       如果你想要參與 SITCON，無論大小活動，都可以從這裡開始。
@@ -142,7 +145,10 @@ export default function Nav() {
     </nav>
   );
 }
-
+function parsePath(path: string) {
+  const { i18n } = useTranslation();
+  return `/${i18n.language}${path}`;
+}
 const ListItem = ({
   className,
   title,
@@ -155,14 +161,13 @@ const ListItem = ({
   children: React.ReactNode;
   to: string;
 }) => {
-  const { i18n } = useTranslation();
   return (
     <Link
       className={cn(
         "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
         className
       )}
-      to={`/${i18n.language}${to}`}
+      to={parsePath(to)}
       {...props}
     >
       <div className="text-sm font-medium leading-none">{title}</div>
