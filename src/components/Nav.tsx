@@ -10,6 +10,29 @@ import {
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { LuLanguages } from "react-icons/lu";
+import { Button } from "@/components/ui/button";
+import { useLocation, useNavigate } from "react-router-dom";
+function LanguageSwitchButton() {
+  const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  function toggleLanguage() {
+    const currentLanguage = i18n.language;
+    const nextLanguage = currentLanguage === "en-US" ? "zh-TW" : "en-US";
+    i18n.changeLanguage(nextLanguage);
+    navigate(location.pathname.replace(currentLanguage, nextLanguage));
+  }
+  return (
+    <Button
+      className="bg-transparent hover:bg-gray-100 active:bg-gray-200 text-black"
+      size="icon"
+      onClick={() => toggleLanguage()}
+    >
+      <LuLanguages />
+    </Button>
+  );
+}
 export default function Nav() {
   const { t } = useTranslation();
   return (
@@ -111,6 +134,7 @@ export default function Nav() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+        <LanguageSwitchButton />
       </div>
     </nav>
   );
