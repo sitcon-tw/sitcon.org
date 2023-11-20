@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import seoPrerender from "vite-plugin-seo-prerender";
+import remarkGfm from "remark-gfm";
 import { globSync } from "glob";
 import react from "@vitejs/plugin-react-swc";
 import mdx from "@mdx-js/rollup";
@@ -23,7 +24,7 @@ export default defineConfig({
   plugins: [
     mdx({
       providerImportSource: "@mdx-js/react",
-      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
     }),
     react(),
     seoPrerender({
