@@ -9,7 +9,7 @@ export default function Alert() {
       {open && (
         <motion.div
           className="bg-primary overflow-hidden"
-          initial={{ height: 0 }}
+          initial={false}
           animate={{ height: "auto" }}
           exit={{ height: 0 }}
         >
