@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export default function Header({
   title,
   description,
@@ -9,7 +10,7 @@ export default function Header({
 }) {
   return (
     <div
-      className="bg-gray-100 py-16  mb-4"
+      className="bg-gray-100 py-16 mb-4"
       style={
         featured_image
           ? {
@@ -20,10 +21,24 @@ export default function Header({
             }
           : {}
       }
+      key={title + description}
     >
       <div className="container">
-        <h1 className="text-4xl font-bold mb-4">{title}</h1>
-        <div className="text-gray-600">{description}</div>
+        <motion.h1
+          className="text-4xl font-bold mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          {title}
+        </motion.h1>
+        <motion.div
+          className="text-gray-600"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
+        >
+          {description}
+        </motion.div>
       </div>
     </div>
   );
