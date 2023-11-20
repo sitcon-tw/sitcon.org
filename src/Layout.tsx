@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Alert from "./components/Alert";
 export default function Layout() {
   // redirect by language
   const location = useLocation();
@@ -22,6 +23,7 @@ export default function Layout() {
   }, [location]);
   return (
     <>
+      <Alert />
       <Nav />
       <div className="container">
         <div className="prose">
