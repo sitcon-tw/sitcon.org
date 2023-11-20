@@ -1,14 +1,33 @@
 ---
 title: 首頁
 description: 歡迎你！
+hide_header: true
 ---
 
 # 你好，世界！
 
+```js
+const location = useLocation();
+const navigate = useNavigate();
+
+useEffect(() => {
+  // get browser language
+  let lang = navigator.language;
+  if (location.pathname === "/") {
+    if (["zh-TW", "zh-CN"].includes(lang)) {
+      navigate("/zh-TW");
+    } else {
+      document.documentElement.lang = "en";
+      navigate("/en-US");
+    }
+  }
+}, [location]);
+```
+
 <img
   src="/assets/images/splatoon3.webp"
   alt="splatoon3"
-  className="w-1/2 mx-auto hover:opacity-75 transition-opacity duration-300 ease-in-out"
+  className="w-1/2 mx-auto shadow hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out rounded"
 />
 
 | Alpha | Bravo   |
