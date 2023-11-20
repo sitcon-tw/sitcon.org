@@ -26,7 +26,7 @@ export default function Nav() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>參與</NavigationMenuTrigger>
-              <NavigationMenuContent className="p-2">
+              <NavigationMenuContent>
                 <NavigationMenuLink>Link</NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
