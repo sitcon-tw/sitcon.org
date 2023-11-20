@@ -10,6 +10,7 @@ import {
 import Layout from "./Layout.tsx";
 import "./index.css";
 import { Helmet } from "react-helmet";
+import "./i18n.ts";
 
 const pages: Record<
   string,
