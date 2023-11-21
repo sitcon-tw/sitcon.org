@@ -53,16 +53,22 @@ export default function Nav() {
               <NavigationMenuTrigger>{t("about")}</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid grid-cols-3 md:w-[400px] lg:w-[500px] gap-2">
-                  <div className="col-span-1 bg-primary flex items-start justify-end flex-col p-2 pt-20 text-white rounded-sm text-sm">
+                  <Link
+                    className="col-span-1 bg-primary hover:bg-primary-500 active:bg-primary-600 transition-colors flex items-start justify-end flex-col p-2 pt-20 text-white rounded-sm text-sm"
+                    to={parsePath("/about")}
+                  >
                     關於 SITCON
                     <div className="opacity-50">關於 SITCON 的起源之類的</div>
-                  </div>
+                  </Link>
                   <div className="col-span-2">
-                    <ListItem to="/branding" title="使命">
+                    <ListItem to="/about/mission" title="使命">
                       了解 SITCON 的價值觀與創新嘗試。
                     </ListItem>
-                    <ListItem to="/branding" title="社群文化">
-                      了解 SITCON 的社群文化，包含核心價值、行為準則與社群規範。
+                    <ListItem to="/about/culture" title="社群文化">
+                      了解 SITCON 的社群文化，包含核心價值、行為準則與社群精神。
+                    </ListItem>
+                    <ListItem to="/about/community-guide" title="社群指南">
+                      這是一本指引新夥伴進入 SITCON 與開源社群的簡易手冊。
                     </ListItem>
                     <ListItem to="/about/branding" title="品牌使用規範">
                       SITCON 的品牌使用規範，包含 Logo、名稱、顏色與下載連結。
