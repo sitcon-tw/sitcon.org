@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header.tsx";
+import Page from "./components/Page.tsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout.tsx";
 import "./index.css";
-import { Helmet } from "react-helmet";
 import "./i18n.ts";
 
 const pages: Record<
@@ -40,24 +39,11 @@ const router = createBrowserRouter(
       {Object.keys(pages).map((path: string) => {
         const PageComponent = pages[path].default; // Get the component function
         const frontmatter = pages[path].frontmatter;
-        const { title, description, hide_header } = frontmatter;
         return (
           <Route
             path={parsePath(path)}
             element={
-              <>
-                <Helmet>
-                  <meta charSet="utf-8" />
-                  <title>{title}</title>
-                  <meta name="description" content={description} />
-                </Helmet>
-                {!hide_header && <Header {...frontmatter} />}
-                <div className="container">
-                  <div className="prose">
-                    <PageComponent />
-                  </div>
-                </div>
-              </>
+              <Page element={<PageComponent />} frontmatter={frontmatter} />
             }
             key={path}
           />
