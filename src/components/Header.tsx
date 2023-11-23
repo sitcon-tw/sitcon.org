@@ -10,7 +10,7 @@ export default function Header({
 }) {
   return (
     <div
-      className="bg-gray-100 py-16 mb-4"
+      className="bg-gray-100 py-16 mb-8"
       style={
         featured_image
           ? {
