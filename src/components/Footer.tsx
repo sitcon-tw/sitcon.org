@@ -71,17 +71,6 @@ export default function Footer() {
   return (
     <footer className="w-full bg-primary-100 mt-8">
       <div className="flex flex-col md:flex-row gap-6 lg:container">
-        <div className="flex justify-center items-center text-center flex-col bg-primary text-white pt-5 pb-4 px-4 w-full md:w-[256px]">
-          <img
-            src="/logo-white.svg"
-            alt="logo"
-            className="h-8 -translate-y-1 leading-4 w-min"
-          />
-          <div className="font-bold mt-6">學生計算機年會 </div>
-          <div className="text-sm opacity-75">
-            Students' Information Technology Conference
-          </div>
-        </div>
         <div className="flex-grow flex flex-col gap-6 p-6 lg:px-0">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 flex-grow">
             <FooterItems title="關於">
@@ -130,6 +119,20 @@ export default function Footer() {
             <SocialLink href="https://sitcon.org/medium">
               <FaMedium />
             </SocialLink>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center gap-4 bg-primary text-white pt-5 pb-4 px-4 w-full">
+        <img
+          src="/logo-white.svg"
+          alt="logo"
+          className="h-8 -translate-y-1 leading-4 w-min"
+        />
+        <div>
+          <div className="font-bold">學生計算機年會 </div>
+          <div className="text-sm opacity-75">
+            Students' Information Technology Conference
           </div>
         </div>
       </div>
