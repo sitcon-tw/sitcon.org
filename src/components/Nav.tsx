@@ -57,7 +57,7 @@ export default function Nav() {
                     className="col-span-1 bg-primary hover:bg-primary-500 active:bg-primary-600 transition-colors flex items-start justify-end flex-col p-2 pt-20 text-white rounded-sm text-sm"
                     to={parsePath("/about")}
                   >
-                    關於 SITCON
+                    <div className="font-bold">關於 SITCON</div>
                     <div className="opacity-50">關於 SITCON 的起源之類的</div>
                   </Link>
                   <div className="col-span-2">
@@ -82,11 +82,22 @@ export default function Nav() {
               <NavigationMenuContent>
                 <div className="grid grid-cols-3 md:w-[400px] lg:w-[500px] gap-2">
                   <Link
-                    className="col-span-1 bg-gray-100 hover:bg-gray-200 active:bg-gray-300 transition-colors flex items-start justify-end flex-col p-2 pt-20 rounded-sm text-sm"
+                    className="col-span-1 bg-gray-100 hover:bg-gray-200 active:bg-gray-300 transition-colors flex items-start justify-end flex-col p-2 pt-20 rounded-sm text-sm relative"
                     to={parsePath("/engage/events")}
                   >
-                    活動
-                    <div className="opacity-50">認識 SITCON 舉辦的活動</div>
+                    <img
+                      src="/assets/images/53145660204_383a39f7e3_k.jpg"
+                      className="absolute inset-0 h-full w-full object-cover rounded-sm"
+                      style={{
+                        mask: "linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%)",
+                        WebkitMask:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%)",
+                      }}
+                    />
+                    <div className="font-bold relative">活動</div>
+                    <div className="opacity-50 relative">
+                      認識 SITCON 舉辦的活動
+                    </div>
                   </Link>
                   <div className="col-span-2">
                     <ListItem to="/engage/participate" title="參與社群">
