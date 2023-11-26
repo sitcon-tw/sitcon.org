@@ -9,7 +9,7 @@ import {
   FaTelegramPlane,
   FaMedium,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaOdysee } from "react-icons/fa6";
 import { SiPlurk } from "react-icons/si";
 function parsePath(path: string) {
   const { i18n } = useTranslation();
@@ -118,6 +118,9 @@ export default function Footer() {
             </SocialLink>
             <SocialLink href="https://sitcon.org/medium">
               <FaMedium />
+            </SocialLink>
+            <SocialLink href="https://sitcon.org/odysee">
+              <FaOdysee />
             </SocialLink>
           </div>
         </div>
