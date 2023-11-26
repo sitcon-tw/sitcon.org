@@ -10,7 +10,7 @@ export default function Header({
 }) {
   return (
     <div
-      className="bg-gray-100 py-16 mb-8"
+      className="bg-gray-100 py-16 mb-8 relative"
       style={
         featured_image
           ? {
@@ -23,7 +23,8 @@ export default function Header({
       }
       key={title + description}
     >
-      <div className="container">
+      <div className="absolute inset-0 backdrop-blur-lg bg-gray-100 opacity-70" />
+      <div className="container relative">
         <motion.h1
           className="text-4xl font-bold mb-4"
           initial={{ opacity: 0, y: 20 }}

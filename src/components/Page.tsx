@@ -11,6 +11,7 @@ export default function Page({
     description: string;
     featured_image?: string;
     hide_header?: boolean;
+    date?: string;
   };
 }) {
   const { t } = useTranslation();

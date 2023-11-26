@@ -123,16 +123,16 @@ export default function Nav() {
               <NavigationMenuTrigger>文章</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="w-[300px]">
-                  <ListItem to="/branding" title="最新消息">
+                  <ListItem to="/posts/news" title="最新消息">
                     SITCON 的最新消息，包含活動、公告與其他相關資訊。
                   </ListItem>
-                  <ListItem to="/branding" title="部落格">
+                  <ListItem to="/posts/blog" title="部落格">
                     SITCON 的部落格，包含活動、公告與其他相關資訊。
                   </ListItem>
-                  <ListItem to="/branding" title="新聞稿">
+                  <ListItem to="/posts/press" title="新聞稿">
                     查看 SITCON 釋出的新聞稿。
                   </ListItem>
-                  <ListItem to="/branding" title="媒體報導">
+                  <ListItem to="/posts/report" title="媒體報導">
                     查看過往媒體報導 SITCON 的相關文章。
                   </ListItem>
                 </div>

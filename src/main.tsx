@@ -20,6 +20,7 @@ const pages: Record<
       description: string;
       featured_image?: string;
       hide_header?: boolean;
+      date?: string;
     };
   }
 > = import.meta.glob("./content/**/*.mdx", { eager: true });
